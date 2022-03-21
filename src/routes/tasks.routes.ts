@@ -125,12 +125,6 @@ router.get('/tasks/count', tasksController.getCounter);
  *        $ref: '#components/schemas/Task'
  *    400:
  *     description: Bad request
- *     content:
- *      application/json:
- *       msg:
- *        schema:
- *         $ref: '/components/'
- *        
  *    500:
  *     description: Server Error
  */
