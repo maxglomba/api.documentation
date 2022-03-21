@@ -1,0 +1,41 @@
+
+GET {{host}}/tasks
+
+###
+
+POST {{host}}/tasks
+Content-Type: application/json
+
+{
+    "name": "Necesito crear una app",
+    "description": "Utilizando Nodejs"
+}
+
+###
+
+
+GET {{host}}/tasks/count
+
+###
+
+
+GET {{host}}/tasks/UPlbsihrvt3xAloDlxyJS
+
+###
+
+
+DELETE {{host}}/tasks/utftgaCrgO88FLHZbV9TM
+
+###
+
+
+
+PUT {{host}}/tasks/2
+Content-Type: application/json
+
+{
+    "name": "Modifco la app",
+    "description": "Otro nombre"
+}
+
+###
