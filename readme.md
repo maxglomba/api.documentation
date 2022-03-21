@@ -8,14 +8,7 @@ npm install
 ## DATABASE
 utilize json database with module lowdb
 
-## DOCUMENTATION
-use http://localhost:3000/api-docs
-
-```bash
-user: test
-password: test
-```
-
+## RUN SERVER
 ### Development
 ```bash
 npm run dev
@@ -23,4 +16,12 @@ npm run dev
 ### Production
 ```bash
 npm start
+```
+
+## DOCUMENTATION
+use http://localhost:3000/api-docs
+
+```bash
+user: test
+password: test
 ```
