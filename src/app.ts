@@ -5,6 +5,7 @@ import morgan from 'morgan';
 
 import swaggerUI from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
+import basicAuth from 'express-basic-auth';
 
 import taskRoutes from './routes/tasks.routes';
 import { options } from './swaggerOptions';
@@ -29,6 +30,11 @@ app.use(express.json());
 const specs = swaggerJSDoc(options);
 
 app.use(taskRoutes);
-app.use('/docs', swaggerUI.serve, swaggerUI.setup(specs))
+
+app.use("/api-docs", basicAuth({
+    users: {'test': 'test'},
+    challenge: true,
+}), swaggerUI.serve, swaggerUI.setup(specs));
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs))
 
 export default app;
